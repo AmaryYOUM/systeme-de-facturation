@@ -1,0 +1,18 @@
+    const selectOption = select.selectedOptions[0];
+    let montant
+
+    for (let j = 0; j < selectOption.length; j++) {
+        montant = selectOption.getAttribute("montant")
+        montant += selectOption[j].montant;
+        console.log(montant)
+    }
+
+
+
+    
+    let montant_global = 0;
+    for (let j = 0; j < collection.length; j++) {
+    montant_global += montant
+        document.querySelector('#montant_global').value = montant_global;
+        console.log(montant_global)                
+    }

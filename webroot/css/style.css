@@ -1,0 +1,695 @@
+/* Googlefont Poppins CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  background: #0a2558;
+  transition: all 0.5s ease;
+  z-index: 10; /* Ajouté ici */
+}
+
+.sidebar.active {
+  width: 60px;
+}
+.sidebar .logo-details {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.sidebar .logo-details i {
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  min-width: 60px;
+  text-align: center;
+}
+.sidebar .logo-details .logo_name {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+.sidebar .nav-links {
+  margin-top: 10px;
+}
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  height: 50px;
+}
+.sidebar .nav-links li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li a.active {
+  background: #081d45;
+}
+.sidebar .nav-links li a:hover {
+  background: #081d45;
+  color: #fff;
+}
+
+.sidebar .nav-links li i {
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.sidebar .nav-links li a .links_name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.sidebar .nav-links .log_out {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.btn:hover{
+  background: #0d3073;
+}
+.home-section {
+  position: relative;
+  background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 200px);
+  left: 200px;
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+.home-section nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 200px);
+  left: 200px;
+  z-index: 100;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section nav {
+  left: 60px;
+  width: calc(100% - 60px);
+}
+.home-section nav .sidebar-button {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+nav .sidebar-button i {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.home-section nav .profile-details {
+  display: flex;
+  align-items: center;
+  background: #f5f6fa;
+  border: 2px solid #efeef1;
+  border-radius: 6px;
+  height: 50px;
+  min-width: 190px;
+  padding: 0 15px 0 2px;
+}
+nav .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+nav .profile-details .admin_name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #0d3073;
+  white-space: nowrap;
+}
+nav .profile-details i {
+  font-size: 25px;
+  color: #333;
+}
+.home-section .home-content {
+  position: relative;
+  padding-top: 104px;
+}
+.home-content .overview-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 26px;
+}
+.home-content .overview-boxes2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 26px;
+}
+.overview-boxes .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 4 - 15px);
+  background: #fff;
+  padding: 15px 14px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.overview-boxes2 .box2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 3 - 10px);
+  background: #fff;
+  padding: 13px 12px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.overview-boxes .box-topic {
+  font-size: 20px;
+  font-weight: 300;
+}
+.overview-boxes2 .box2-topic {
+  font-size: 12px;
+  font-weight: 300;
+}
+.home-content .box .number {
+  display: inline-block;
+  font-size: 35px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+.home-content .box2 .number {
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.home-content .box .indicator {
+  display: flex;
+  align-items: center;
+}
+.home-content .box .indicator i {
+  height: 20px;
+  width: 20px;
+  background: #8fdacb;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.box .indicator i.down {
+  background: #e87d88;
+}
+.home-content .box .indicator .text {
+  font-size: 12px;
+}
+.home-content .box .cart {
+  display: inline-block;
+  font-size: 32px;
+  height: 50px;
+  width: 50px;
+  background: #cce5ff;
+  line-height: 50px;
+  text-align: center;
+  color: #66b0ff;
+  border-radius: 12px;
+  margin: -15px 0 0 6px;
+}
+.home-content .box2 .cart {
+  display: inline-block;
+  font-size: 32px;
+  height: 50px;
+  width: 50px;
+  background: #00BFFF;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 12px;
+  margin: 0px 0 0 10px;
+}
+.home-content .box .cart.two {
+  color: #2bd47d;
+  background: #c0f2d8;
+}
+.home-content .box2 .cart.two {
+  color: #ffffff;
+  background: #8A2BE2;
+}
+.home-content .box .cart.three {
+  color: #ffc233;
+  background: #ffe8b3;
+}
+.home-content .box2 .cart.three {
+  color: #ffffff;
+  background: #32CD32;
+}
+.home-content .box .cart.four {
+  color: #e05260;
+  background: #f7d4d7;
+}
+.home-content .total-order {
+  font-size: 20px;
+  font-weight: 500;
+}
+.home-content .sales-boxes {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 20px; */
+}
+
+/* left box */
+.home-content .sales-boxes .recent-sales{
+  width: 65%;
+  background: #fff;
+  padding: 20px 30px;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.home-content .sales-boxes .sales-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sales-boxes .box .title {
+  font-size: 15px;
+  font-weight: 500;
+  /* margin-bottom: 10px; */
+}
+.sales-boxes .sales-details li.topic {
+  font-weight: 500;
+}
+.sales-boxes .sales-details li {
+  list-style: none;
+  margin:0;
+}
+.recent-sales .sales-details .details li {
+  list-style: none;
+  margin:0;
+  font: size 10px;
+}
+
+.sales-boxes .sales-details li a {
+  font-size: 12px;
+  color: #333;
+  font-size: 400;
+  text-decoration: none;
+}
+.sales-boxes .box .button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.sales-boxes .box .button a {
+  color: #fff;
+  background: #0a2558;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.sales-boxes .box .button a:hover {
+  background: #0d3073;
+}
+
+/* Right box */
+.home-content .sales-boxes .top-sales {
+  width: 35%;
+  background: #fff;
+  padding: 20px 30px;
+  margin: 0 20px 0 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.sales-boxes .top-sales li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.sales-boxes .top-sales li a img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 10px;
+  background: #333;
+}
+.sales-boxes .top-sales li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.sales-boxes .top-sales li .product,
+.price {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+}
+/* Responsive Media Query */
+@media (max-width: 1240px) {
+  .sidebar {
+    width: 60px;
+  }
+  .sidebar.active {
+    width: 220px;
+  }
+
+  .home-section {
+  position: relative;
+  width: calc(100% - 200px);
+  left: 200px;
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section {
+  width: calc(100% - 220px);
+  left: 220px;
+}
+
+  .home-section nav {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .sidebar.active ~ .home-section nav {
+    width: calc(100% - 220px);
+    left: 220px;
+  }
+}
+@media (max-width: 1150px) {
+  .home-content .sales-boxes {
+    flex-direction: column;
+  }
+  .home-content .sales-boxes .box {
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+  }
+  .home-content .sales-boxes .top-sales {
+    margin: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .overview-boxes .box {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 700px) {
+  nav .sidebar-button .dashboard,
+  nav .profile-details .admin_name,
+  nav .profile-details i {
+    display: none;
+  }
+  .home-section nav .profile-details {
+    height: 50px;
+    min-width: 40px;
+  }
+  .home-content .sales-boxes .sales-details {
+    width: 560px;
+  }
+}
+@media (max-width: 550px) {
+  .overview-boxes .box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .sidebar.active ~ .home-section nav .profile-details {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .sidebar {
+    width: 0;
+    display: none;
+  }
+  .sidebar.active {
+    width: 60px;
+    display: block;
+  }
+  .home-section {
+    width: 100%;
+    left: 0;
+  }
+  .sidebar.active ~ .home-section {
+    width: 100%;
+    left: 0;
+  }
+  .home-section nav {
+    width: 100%;
+    left: 0;
+  }
+}
+
+
+/*Mon css*/
+
+/*prestation par service*/
+
+.input-box{
+  margin-bottom: 20px;
+}
+.form-patient-box{
+color: white !important;
+}
+
+button{
+  background-color: #0a2558;
+  color: white;
+  width: auto;
+  height: 30px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: white;
+  color: #0a2558;
+  border: 1px solid #0a2558;
+}
+
+form{
+  width: 100%;
+}
+.form_header{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.table-boxes {
+  align-items: center;
+  width: 245px;
+  padding: 10px 19px;
+  background: #ffffff;
+  justify-content: center;
+  border: 1px solid #0a2558;
+  border-radius: 12px;
+  font-size:10px;
+}
+
+.content-boxes{
+  background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 245px);
+  border: 1px solid #0a2558;
+  background: #ffffff;
+  border-radius: 12px;
+
+}
+/* page facture */
+
+.cote-a-cote {
+  display: flex;
+  justify-content: space-between;
+}
+
+.patient-box {
+  width: auto;
+  height: auto;
+  margin: auto;
+  background: #0a2558;
+  color: white;
+  border: 1px #d3d3d3 solid;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Impression générale */
+@page {
+  size: 80mm auto;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 80mm;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hidden-print,
+  .hidden-print * {
+    display: none !important;
+  }
+
+  .page {
+    margin: 0;
+    border: none;
+    width: auto;
+    box-shadow: none;
+    background: white;
+    page-break-after: always;
+  }
+
+  .page_agent {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Print agent */
+.cote-a-cote_print {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 11px;
+  flex-wrap: wrap;
+}
+
+.page_agent {
+  width: 100%;
+  max-width: 80mm;
+  margin: 0 auto;
+  padding: 5mm 3mm;
+  font-size: 12px;
+  line-height: 1.3;
+  background: white;
+  box-sizing: border-box;
+}
+
+.page_agent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+.page_agent td,
+.page_agent th {
+  font-size: 11px;
+  padding: 3px;
+  border: 1px solid black;
+  text-align: left;
+}
+
+.page_agent .footer {
+  text-align: center;
+  font-size: 9px;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+/* End print agent */
+
+/*print admin*/
+/* Centrage du contenu pour les impressions A4 */
+@media print {
+  /* Pour la classe .page_admin qui concerne les pages A4 */
+  .page_admin_preview {
+    width: 100%; /* Utiliser toute la largeur de la page A4 */
+    max-width: 210mm; /* Limiter la largeur à 210mm pour un format A4 */
+    margin: 0 auto; /* Centrer horizontalement */
+    padding: 10mm 20mm; /* Ajouter des marges de 10mm sur les bords et 20mm à gauche et à droite pour un peu d'espace */
+    box-sizing: border-box; /* S'assurer que le padding est inclus dans la largeur */
+  }
+
+  /* Si vous avez d'autres éléments à personnaliser pour A4 */
+  .page_admin_preview table {
+    width: 100%; /* S'assurer que les tables prennent toute la largeur */
+    margin-top: 10px;
+    border-collapse: collapse;
+  }
+
+  .page_admin_preview td,
+  .page_admin_preview th {
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid black;
+    text-align: left;
+  }
+}
+
+/*End print admin*/
+
+
+
+.table-responsive {
+    overflow-x: auto;
+}
+.table.table-bordered th, 
+.table.table-bordered td {
+    font-size: 11px; /* Taille réduite mais lisible */
+    padding: 4px 6px; /* Réduction des marges internes */
+    vertical-align: middle;
+}
+.table.table-bordered td, 
+.table.table-bordered th {
+    max-width: 150px; /* Limite la largeur des colonnes */
+    word-wrap: break-word; /* Permet de couper proprement dans certaines colonnes */
+    white-space: normal; /* Permet de passer à la ligne pour le contenu long */
+}
+li{
+        list-style:none;
+}
+.highlight-row {
+    background-color: #ffe6e6; /* Ligne colorée si modifier == 1 */
+}
+
+.pagination ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.pagination li {
+    margin: 0 5px;
+}
+.pagination a, .pagination span {
+    padding: 6px 12px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 4px;
+}
+.pagination .active a {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.pagination span {
+    cursor: default;
+}

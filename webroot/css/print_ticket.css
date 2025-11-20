@@ -1,0 +1,93 @@
+/* Mise en page générale */
+body, html {
+  width: 80mm;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background: white;
+}
+
+/* Cache les éléments à ne pas imprimer */
+@media print {
+  .hidden-print,
+  .hidden-print * {
+    display: none !important;
+  }
+}
+
+/* Bloc principal */
+.page_agent {
+  width: 80mm;
+  padding: 5mm;
+  box-sizing: border-box;
+}
+
+/* Images logo */
+.cote-a-cote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.cote-a-cote img {
+  max-width: 38mm;
+  height: auto;
+}
+
+/* Table style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 4px;
+  text-align: left;
+}
+
+thead {
+  background: #000;
+  color: #fff;
+}
+
+/* Section informations patient/facture */
+div.cote-a-cote {
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Pied de page */
+ul {
+  padding: 0;
+  margin: 10px 0 0 0;
+  list-style: none;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* Format impression */
+@page {
+  size: 80mm auto;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 80mm;
+    height: auto;
+  }
+
+  .page_agent {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}
